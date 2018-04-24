@@ -120,7 +120,7 @@ git status
 On branch branch_1
 nothing to commit, working directory clean
 """
-```
+
 # 显示暂存区和工作区的代码差异
 git diff
 
@@ -152,6 +152,14 @@ $ git remote add [shortname] [url]
 
 # 取回远程仓库的变化，并与本地分支合并
 $ git pull [remote] [branch]
+"""
+# 和远程的仓库同步(master分支)
+git pull  <==> git pull origin master
+Updating 7c13ec5..ffe3cdc
+Fast-forward
+ README.md | 171 +++++++++++++++++++++++
+ 1 file changed, 171 insertions(+)
+"""
 
 # 上传本地指定分支到远程仓库
 $ git push [remote] [branch]
@@ -161,6 +169,27 @@ $ git push [remote] --force
 
 # 推送所有分支到远程仓库
 $ git push [remote] --all
+
+# 推送一个空分支到远程分支，其实就相当于删除远程分支：
+git push origin :branchName
+# 在Git v1.7.0 之后，可以使用这种语法删除远程分支
+git push origin --delete <branchName>
+
+
+```
+
+#### 重命名本地分支
+首先删除远程分支,然后修改本地分支名字,提交
+```
+# 删除远程分支：
+git push --delete origin branch_1
+# 重命名本地分支：
+git branch -m branch_1 branch-1
+# 推送本地分支：
+git push origin branch-1
+```
+####　分支合并
+
 #### 参考:
 
 [GIT 常用命令](https://www.cnblogs.com/chenwolong/p/GIT.html)
@@ -170,3 +199,5 @@ $ git push [remote] --all
 [聊下git pull --rebase](https://www.cnblogs.com/wangiqngpei557/p/6056624.html)
 
 [Gitlab简单使用指南](https://blog.csdn.net/lemonaha/article/details/69977098)
+
+[git pull和git merge 区别?](https://segmentfault.com/q/1010000009076820/a-1020000009076916)
