@@ -3,6 +3,7 @@ AAAAAAAAAAAAAAAAA
 current branch's modify must be commit, we only could be switch other branch!
 sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 ----------------------------------------------------------------------------
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 #### create a new repository on the command line
 场景一：远程服务器已建好空仓库，此时如何提交到这个仓库中
 ```
